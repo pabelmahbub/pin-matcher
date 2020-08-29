@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="pin-generator half-width">
+                    <input id="generated-no" class="text-center form-control" type="text">
+                    <button id="generate-pin" class="generate-btn">Generate Pin</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="input-section half-width">
+                    <input id="submit-no" class="form-control text-center " type="text">
+                    <div class="numbers">
+                        <div id = "screen" class="calc-body">
+                            <div class="calc-button-row">
+                              <div class="button">7</div>
+                              <div class="button">8</div>
+                              <div class="button">9</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button">4</div>
+                              <div class="button">5</div>
+                              <div class="button">6</div>
+                            </div>
+                            <div class="calc-button-row">
+                              <div class="button">1</div>
+                              <div class="button">2</div>
+                              <div class="button">3</div>
+                            </div>
+                            <div class="calc-button-row">
+                                <div class="button"><</div>
+                                <div id="button-0" class="button">0</div>
+                                <div class="button">C</div>
+                            </div>
+                            <div>
+                                <button id = "submit-btn" type="submit" class="submit-btn">Submit</button>
+                                <p class="action-left">3 try left</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        // have to hide last section
+        <div id="last-section" class="notify-section">
+            <p class="notify">❌ Pin Didn't Match, Please try again</p>
+            <p id="matching-ok" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+        </div>
+    </div>
+
+
+
+
+<script>
+
+var generatePin = document.getElementById("generate-pin");
+ generatePin.addEventListener("click", function(){
+
+var generatedNo = Math.ceil((Math.random() * 10000));
+
+if (generatedNo > 1000){
+document.getElementById("generated-no").value = generatedNo;
+}else{
+    document.getElementById("generated-no").value = Math.ceil((Math.random() * 10000));
+}
+})       
+
+// right side verification section
+/*function myFunction() {
+  var x = document.getElementsByClassName("button");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    x[i].addEventListener("click", function(){
+  
+  console.log("Hello");
+}
+
+var rightNo = x.addEventListener("click", function(){
+
+
+
+*/
+
+
+const submitBtn = document.querySelectorAll(".button");
+ 
+for (var i = 0; i < submitBtn; i++){
+  var element = authors[i];
+}
+  submitBtn.addEventListener("click", function(){
+
+  const noOne = document.querySelector(element).innerText;
+
+ //var noOne = document.getElementById("no-1").innerText;
+document.getElementById("submit-no").value = noOne;
+ })
+
+
+// submit section
+    //var submitBtn = document.getElementById("submit-btn");
+    //submitBtn.addEventListener("click", function(){
+
+      //  var newInput = document.getElementById("generated-no").value;
+      //  var newValue = document.getElementById("generated-pin").innerText;
+   // if(newInput == newValue){
+      //  document.getElementById("matching-ok").style.display= "block";
+//})
+/*
+let screen = document.getElementById("screen");
+buttons =document.querySelectorAll("button");
+let screenValue = '';
+
+for (item of buttons){
+  item.addEventListener("click",function(){
+  
+  buttonText = e.target.innerText;
+   console.log('Button text is', buttonText);
+   if(buttonText == "X"){
+     buttonText = '*';
+     screenValue += buttonText;
+     screen.value = screenValue;
+
+  }
+  else if(buttonText == "C"){
+    screen.value = "=";
+    screen.value = screenValue;
+  }
+  else if (buttonText == "="){
+    screen.value = eval(screenValue);
+  }
+  else{
+    screenValue += buttonText;
+    screen.value = screenValue;
+  }
+ })
+}
+
+*/
+
+        </script>
+
+</body>
+</html>
+/*
+
+<!---
+var at = document.getElementById("email").value.indexOf("@");
+var age = document.getElementById("age").value;
+var fname = document.getElementById("fname").value;
+submitOK = "true";
+
+if (fname.length > 10) {
+  alert("The name may have no more than 10 characters");
+  submitOK = "false";
+}
+
+if (isNaN(age) || age < 1 || age > 100) {
+  alert("The age must be a number between 1 and 100");
+  submitOK = "false";
+}
+
+if (at == -1) {
+  alert("Not a valid e-mail!");
+  submitOK = "false";
+}
+
+if (submitOK == "false") {
+  return false;
+}
+
+-->
