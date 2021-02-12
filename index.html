@@ -52,7 +52,7 @@
             </div>
         </div>
 
-        // have to hide last section
+        
         <div id="last-section" class="notify-section">
             <p class="notify">❌ Pin Didn't Match, Please try again</p>
             <p id="matching-ok" class="notify">✅ Pin Matched... Secret door is opening for you</p>
@@ -76,21 +76,7 @@ document.getElementById("generated-no").value = generatedNo;
 }
 })       
 
-// right side verification section
-/*function myFunction() {
-  var x = document.getElementsByClassName("button");
-  var i;
-  for (i = 0; i < x.length; i++) {
-    x[i].addEventListener("click", function(){
-  
-  console.log("Hello");
-}
 
-var rightNo = x.addEventListener("click", function(){
-
-
-
-*/
 
 
 const submitBtn = document.querySelectorAll(".button");
@@ -107,28 +93,7 @@ document.getElementById("submit-no").value = noOne;
  })
 
 
-// submit section
-    //var submitBtn = document.getElementById("submit-btn");
-    //submitBtn.addEventListener("click", function(){
 
-      //  var newInput = document.getElementById("generated-no").value;
-      //  var newValue = document.getElementById("generated-pin").innerText;
-   // if(newInput == newValue){
-      //  document.getElementById("matching-ok").style.display= "block";
-//})
-/*
-let screen = document.getElementById("screen");
-buttons =document.querySelectorAll("button");
-let screenValue = '';
-
-for (item of buttons){
-  item.addEventListener("click",function(){
-  
-  buttonText = e.target.innerText;
-   console.log('Button text is', buttonText);
-   if(buttonText == "X"){
-     buttonText = '*';
-     screenValue += buttonText;
      screen.value = screenValue;
 
   }
@@ -146,37 +111,11 @@ for (item of buttons){
  })
 }
 
-*/
+
 
         </script>
 
 </body>
 </html>
-/*
 
-<!---
-var at = document.getElementById("email").value.indexOf("@");
-var age = document.getElementById("age").value;
-var fname = document.getElementById("fname").value;
-submitOK = "true";
 
-if (fname.length > 10) {
-  alert("The name may have no more than 10 characters");
-  submitOK = "false";
-}
-
-if (isNaN(age) || age < 1 || age > 100) {
-  alert("The age must be a number between 1 and 100");
-  submitOK = "false";
-}
-
-if (at == -1) {
-  alert("Not a valid e-mail!");
-  submitOK = "false";
-}
-
-if (submitOK == "false") {
-  return false;
-}
-
--->
